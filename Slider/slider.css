@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    background: rgb(60, 60, 60);
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.slides{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide{
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+}
+
+.shown{
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 1s;
+}
+
+.wh-100{
+    width: 100%;
+    height: 100%;
+}
+
+.arrows{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.left, .right{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.left:hover, .right:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+
+
+/* MAIN THINGS END
+   Touch only height of slides and arrow color if u need to
+*/
+
+
+/* Custom stuff inside slide */
+
+.custom-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    background: url('https://images.unsplash.com/photo-1444464666168-49d633b86797?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1469&q=80') center center/cover no-repeat;
+}
+
+.custom-slide h1 {
+    font-size: 150px;
+}
+
+.custom-slide h4{
+    font-style: italic;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* slide-2 */
+
+.custom-slide-2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-slide-2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.7);
+    z-index: 1;
+    background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1544&q=80') center center/cover no-repeat;
+}
+
+.slide-2-content{
+    font-size: 50px;
+    z-index: 100;
+    color: white;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .slide-2-content{
+        font-size: 20px;
+        z-index: 100;
+        color: white;
+    }
+
+    .custom-slide h1 {
+        font-size: 50px;
+    }
+    
+    .custom-slide h4{
+        font-style: italic;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+}

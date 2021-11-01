@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome link, for icons, you can add what you want, make sure you trigger functions -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!--  -->
+    <!-- You can only pass link to css and script in your html and copy main only -->
+    <link rel="stylesheet" href="slider.css">
+    <title>Slider</title>
+</head>
+<body>
+
+    <main id="main">
+        <!-- For diffrent height, change main height in css -->
+
+        <!-- Make sure slide ids are not same, no matter what u use for id -->
+        <div class="slides" id="slides">
+
+            <div id="slide-1" class="slide"> 
+                <div class="wh-100 custom-slide">
+                  <h1> HELLO </h1>  
+                  <h4>This is slider, use arrows to go on next.</h4>
+                </div>
+            </div>
+
+            <div id="slide-2" class="slide"> 
+                <!-- Add class wh-100 to fill all space -->
+                <div class="custom-slide-2 wh-100">
+
+                    <div class="slide-2-content">
+                        <h1>
+                            For best responsivity, use images as backgrounds in css. Third slide is example for img in html.
+                        </h1>
+                    </div>
+
+                </div> 
+            </div>
+
+            <div id="slide-3" class="slide"> 
+                <img class="wh-100" src="https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1631&q=80" alt="">
+            </div>
+
+        </div>
+
+        <!-- Add color to icons in css -->
+        <div class="arrows" id="arrows">
+           <span class="left" onclick="slidePrevious()">
+                <i class="fas fa-chevron-left fa-5x"></i>
+           </span>
+
+           <span class="right" onclick="slideNext()">
+                <i class="fas fa-chevron-right fa-6x"></i>
+           </span>
+        </div>
+
+    </main>
+
+    <script src="slider.js"></script>
+    
+</body>
+</html>
